@@ -1,0 +1,22 @@
+server:
+  port: 8082
+  
+spring:
+  application:
+    name: customer-service
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVICE_DOMAIN:localhost}:8888
+      name: customer-service
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_SERVICE_DOMAIN:localhost}:8666/eureka/
+
+management:
+  security:
+    enabled: false
