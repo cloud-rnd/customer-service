@@ -26,11 +26,3 @@ logging:
     org.chiwooplatform.cloud.sample.rest: DEBUG 
     org.chiwooplatform.cloud.sample: DEBUG
       
-    
----
-
-spring:
-  profiles: prod
-server:
-  port: 8086
-  

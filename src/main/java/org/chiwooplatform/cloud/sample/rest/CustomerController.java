@@ -10,18 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-public class CustomerController {
+public class CustomerController
+{
+    private static Logger logger = LoggerFactory.getLogger( CustomerController.class );
 
+    @Value("${greeting:Hi~~}")
+    private String greeting;
 
-    private static Logger logger = LoggerFactory.getLogger(CustomerController.class);
-    
-	@Value("${greeting:Hi~~}")
-	private String greeting;
-
-	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
-	public String greeting() {
-	    logger.info("greeting");
-		return greeting;
-	}
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
+    public String greeting()
+    {
+        logger.info( "greeting" );
+        return greeting;
+    }
 }
- 
