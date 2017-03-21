@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: customer-service
-  cloud:
-    config:
-      uri: http://${CONFIG_SERVICE_DOMAIN:localhost}:8888
-      name: customer-service
 
 eureka:
   instance:

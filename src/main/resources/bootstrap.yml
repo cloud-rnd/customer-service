@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: http://config-service:8888/
+      name: customer-service
+      enabled: true
