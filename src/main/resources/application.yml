@@ -9,6 +9,11 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
+    # Discover Servery try to look-up hostname for resolving client services.
+    hostname: customer-server
+    # Following properties "ip-address and prefer-ip-address" for accessing application within container of docker.
+    #ip-address: 192.168.0.113
+    #prefer-ip-address: true 
   client:
     serviceUrl:
       defaultZone: http://${DISCOVERY_SERVICE_DOMAIN:localhost}:8761/eureka/
